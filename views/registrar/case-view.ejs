@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JIS-Case_View</title>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/case.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section id="title">
+      <!-- Nav Bar -->
+      <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="../index.html"
+          >Judiciary Information System</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="..\index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <div class="container">
+      <div id="form_header_container">
+        <h2 id="form_header">SEARCH CASE DETAILS</h2>
+      </div>
+      <form action="/list-cases" method="POST">
+        <label for="Cno">Case Number.</label>
+        <input
+          type="text"
+          id="Cno"
+          name="Casenumber"
+          placeholder="case no..."
+        />
+      </form>
+
+      <label class="detl" for="details">Case Details</label>
+
+      <ul id="restaurants-list">
+        <% if(storedCases.length === 0){ %> Sorry, no cases found! <% }else{ %> <% for(const cases of
+        storedCases){ %> <%- include('case-details.ejs', { cases: cases }) %> <%
+        } %> <% } %>
+      </ul>
+    </div>
+
+    <div class="bottom-c">
+      <hr />
+      <div class="feedback">
+        <h2>Feedback</h2>
+        <h3></h3>
+        <p>Give any feedback on this website you want to improve and change.</p>
+        <a class="btn" href="mailto:prayasbhoi@email.com">FEEDBACK</a>
+      </div>
+
+      <a
+        class="footer-link"
+        href="D:\STUDY MATERIAL\Web Development\Mywork\SWE_Project\index.html"
+      >
+        Home</a>
+      <a class="footer-link" href="https://www.linkedin.com/"> LinkedIn</a>
+      <a class="footer-link" href="https://twitter.com/"> Twitter</a>
+      <p>© Copyright JIS</p>
+    </div>
+  </body>
+</html>

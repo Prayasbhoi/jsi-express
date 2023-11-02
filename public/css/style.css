@@ -1,0 +1,107 @@
+body{
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  background-color: #E4F9F5;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  h1{
+    font-size: 4.625rem;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  }
+  h2{
+    font-size: 2.5rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  }
+  h1:hover, a:hover {
+    color: rgb(255, 34, 0);
+  }
+  h2:hover{
+    color:green;
+  }
+  p:hover{
+    color:rgb(0, 8, 255);
+  }
+  .container_top{
+    background-color: #E4F9F5;
+    position: middle;
+    padding-left: 00px;
+    border-bottom: 0px;
+    margin: 0;
+  }
+  .back-ground{
+    
+    position: middle;
+
+  }
+  .mid-container{
+    padding-top: 50px;
+    background-color: #E4F9F5;
+    position: middle;
+    padding-left: 100px;
+
+  }
+  .payment{
+    width:25%;
+    position: right;
+  }
+  .txt{
+    
+    position:absolute;
+    left: 150px;
+    top:100px;
+    color: bisque;
+  }
+  .txt1{
+    position:absolute;
+    left:100px;
+    top:200px;
+    color: bisque;
+  }
+  .work-row{
+    width:50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+  
+  }
+  .registrar-img{
+    width: 30%;
+    float: left;
+    margin-right: 30px;
+  }
+  .jugde-img{
+    width: 30%;
+    float: right;
+    margin-right: 30px;
+  }
+  .lawyer-img{
+    width: 30%;
+    float: left;
+    margin-right: 30px;
+    
+  }
+  .payment-img{
+    width: 25%;
+    float: right;
+    margin-right: 30px;
+    
+  }
+  
+  .bottom-c{
+    text-allign:middle;
+    padding-top: 50px;
+    background-color: #E4F9F5;
+    position: center;
+    padding-left: 0px;
+  }
